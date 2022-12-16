@@ -1,0 +1,414 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Microsoft.Toolkit.HighPerformance/7.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Microsoft.Toolkit.HighPerformance.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.Toolkit.HighPerformance.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "raylib/4.2.0.2": {
+        "type": "package"
+      },
+      "Raylib-cs/4.2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "compile": {
+          "lib/net6.0/Raylib-cs.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Raylib-cs.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libraylib.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/libraylib.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/raylib.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/raylib.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "Raylib-CsLo/4.2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Toolkit.HighPerformance": "7.1.2"
+        },
+        "compile": {
+          "lib/netstandard2.1/Raylib-CsLo.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Raylib-CsLo.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/netstandard2.1/raylib.dll": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/netstandard2.1/raylib.pdb": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libraylib.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/readme.md": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/libraylib.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/readme.md": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/raylib.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/raylib.pdb": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/needs-pr.txt": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.Toolkit.HighPerformance/7.1.2": {
+      "sha512": "cezzRky0BUJyYmSrcQUcX8qAv90JfUwCqWEbqfWZLHyeANo9/LWgW6y50pqbyc8r8SPXVsu2GNH98fB3VxrnvA==",
+      "type": "package",
+      "path": "microsoft.toolkit.highperformance/7.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "License.md",
+        "ThirdPartyNotices.txt",
+        "lib/net5.0/Microsoft.Toolkit.HighPerformance.dll",
+        "lib/net5.0/Microsoft.Toolkit.HighPerformance.pdb",
+        "lib/net5.0/Microsoft.Toolkit.HighPerformance.xml",
+        "lib/netcoreapp2.1/Microsoft.Toolkit.HighPerformance.dll",
+        "lib/netcoreapp2.1/Microsoft.Toolkit.HighPerformance.pdb",
+        "lib/netcoreapp2.1/Microsoft.Toolkit.HighPerformance.xml",
+        "lib/netcoreapp3.1/Microsoft.Toolkit.HighPerformance.dll",
+        "lib/netcoreapp3.1/Microsoft.Toolkit.HighPerformance.pdb",
+        "lib/netcoreapp3.1/Microsoft.Toolkit.HighPerformance.xml",
+        "lib/netstandard1.4/Microsoft.Toolkit.HighPerformance.dll",
+        "lib/netstandard1.4/Microsoft.Toolkit.HighPerformance.pdb",
+        "lib/netstandard1.4/Microsoft.Toolkit.HighPerformance.xml",
+        "lib/netstandard2.0/Microsoft.Toolkit.HighPerformance.dll",
+        "lib/netstandard2.0/Microsoft.Toolkit.HighPerformance.pdb",
+        "lib/netstandard2.0/Microsoft.Toolkit.HighPerformance.xml",
+        "lib/netstandard2.1/Microsoft.Toolkit.HighPerformance.dll",
+        "lib/netstandard2.1/Microsoft.Toolkit.HighPerformance.pdb",
+        "lib/netstandard2.1/Microsoft.Toolkit.HighPerformance.xml",
+        "microsoft.toolkit.highperformance.7.1.2.nupkg.sha512",
+        "microsoft.toolkit.highperformance.nuspec"
+      ]
+    },
+    "raylib/4.2.0.2": {
+      "sha512": "AE9S/NEWEd7KMEODc0zcU7lJt8OVzS1XeFBRpyjwLc0doyGwAaa45+zkWoanjtotOwomItmRJEVA4dFMpd5CaA==",
+      "type": "package",
+      "path": "raylib/4.2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/native/LICENSE",
+        "build/native/README.md",
+        "build/native/include/AudioDevice.hpp",
+        "build/native/include/AudioStream.hpp",
+        "build/native/include/BoundingBox.hpp",
+        "build/native/include/Camera2D.hpp",
+        "build/native/include/Camera3D.hpp",
+        "build/native/include/Color.hpp",
+        "build/native/include/Font.hpp",
+        "build/native/include/Functions.hpp",
+        "build/native/include/Gamepad.hpp",
+        "build/native/include/Image.hpp",
+        "build/native/include/Material.hpp",
+        "build/native/include/Matrix.hpp",
+        "build/native/include/Mesh.hpp",
+        "build/native/include/Model.hpp",
+        "build/native/include/ModelAnimation.hpp",
+        "build/native/include/Mouse.hpp",
+        "build/native/include/Music.hpp",
+        "build/native/include/Physics.hpp",
+        "build/native/include/Ray.hpp",
+        "build/native/include/RayCollision.hpp",
+        "build/native/include/RaylibException.hpp",
+        "build/native/include/Rectangle.hpp",
+        "build/native/include/RenderTexture.hpp",
+        "build/native/include/Shader.hpp",
+        "build/native/include/Sound.hpp",
+        "build/native/include/Text.hpp",
+        "build/native/include/Texture.hpp",
+        "build/native/include/TextureUnmanaged.hpp",
+        "build/native/include/Touch.hpp",
+        "build/native/include/Vector2.hpp",
+        "build/native/include/Vector3.hpp",
+        "build/native/include/Vector4.hpp",
+        "build/native/include/VrStereoConfig.hpp",
+        "build/native/include/Wave.hpp",
+        "build/native/include/Window.hpp",
+        "build/native/include/extras/external/aes.c",
+        "build/native/include/extras/external/aes.h",
+        "build/native/include/extras/external/lz4.c",
+        "build/native/include/extras/external/lz4.h",
+        "build/native/include/extras/external/monocypher.c",
+        "build/native/include/extras/external/monocypher.h",
+        "build/native/include/extras/external/qoi.h",
+        "build/native/include/extras/gui_textbox_extended.h",
+        "build/native/include/extras/physac.h",
+        "build/native/include/extras/reasings.h",
+        "build/native/include/extras/rlights.h",
+        "build/native/include/extras/rmem.h",
+        "build/native/include/extras/rpng.h",
+        "build/native/include/extras/rres-raylib.h",
+        "build/native/include/extras/rres.h",
+        "build/native/include/physac.hpp",
+        "build/native/include/raygui.h",
+        "build/native/include/raylib-cpp-utils.hpp",
+        "build/native/include/raylib-cpp.hpp",
+        "build/native/include/raylib.h",
+        "build/native/include/raylib.hpp",
+        "build/native/include/raymath.h",
+        "build/native/include/raymath.hpp",
+        "build/native/include/rlgl.h",
+        "build/native/lib/win32/raylib.dll",
+        "build/native/lib/win32/raylib.lib",
+        "build/native/lib/win32/raylibdll.lib",
+        "build/native/lib/x64/raylib.dll",
+        "build/native/lib/x64/raylib.lib",
+        "build/native/lib/x64/raylibdll.lib",
+        "build/native/raylib.targets",
+        "build/native/raylibUI.xml",
+        "build/native/raylib_128x128.png",
+        "raylib.4.2.0.2.nupkg.sha512",
+        "raylib.nuspec"
+      ]
+    },
+    "Raylib-cs/4.2.0.1": {
+      "sha512": "DjBZuUPNVGbaWTWx2JgU4kaOn/crZWWpBlcxMBd6xUWGZxHFRr8v4nsSkOIdCm8HjkeoifNqeHLq99l0QoC8fg==",
+      "type": "package",
+      "path": "raylib-cs/4.2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net5.0/Raylib-cs.dll",
+        "lib/net5.0/Raylib-cs.xml",
+        "lib/net6.0/Raylib-cs.dll",
+        "lib/net6.0/Raylib-cs.xml",
+        "raylib-cs.4.2.0.1.nupkg.sha512",
+        "raylib-cs.nuspec",
+        "raylib-cs_64x64.png",
+        "runtimes/linux-x64/native/libraylib.so",
+        "runtimes/osx-x64/native/libraylib.dylib",
+        "runtimes/win-x64/native/raylib.dll",
+        "runtimes/win-x86/native/raylib.dll"
+      ]
+    },
+    "Raylib-CsLo/4.2.0.3": {
+      "sha512": "f2F81AbUi8bPIZXoyQ60sY4Wdu60rpjHc8a4MaLwxDZbugvS4H2p2EsboFiVNqit9a0Xga3OyCbId7/HIAJmRw==",
+      "type": "package",
+      "path": "raylib-cslo/4.2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "content/raylib.dll",
+        "content/raylib.pdb",
+        "contentFiles/any/netstandard2.1/raylib.dll",
+        "contentFiles/any/netstandard2.1/raylib.pdb",
+        "lib/netstandard2.1/Raylib-CsLo.dll",
+        "lib/netstandard2.1/Raylib-CsLo.pdb",
+        "lib/netstandard2.1/Raylib-CsLo.xml",
+        "raylib-cslo.4.2.0.3.nupkg.sha512",
+        "raylib-cslo.nuspec",
+        "raylib-cslo_128x128.png",
+        "runtimes/linux-x64/native/libraylib.so",
+        "runtimes/linux-x64/native/readme.md",
+        "runtimes/osx-x64/native/libraylib.dylib",
+        "runtimes/osx-x64/native/readme.md",
+        "runtimes/readme.md",
+        "runtimes/win-x64/native/raylib.dll",
+        "runtimes/win-x64/native/raylib.pdb",
+        "runtimes/win-x86/native/needs-pr.txt"
+      ]
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.Numerics.Vectors.dll",
+        "ref/net45/System.Numerics.Vectors.xml",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.5.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Raylib-CsLo >= 4.2.0.3",
+      "Raylib-cs >= 4.2.0.1",
+      "raylib >= 4.2.0.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\kadir.goktekin\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\kadir.goktekin\\Documents\\Programmering\\Niko\\Niko\\Niko.csproj",
+      "projectName": "Niko",
+      "projectPath": "C:\\Users\\kadir.goktekin\\Documents\\Programmering\\Niko\\Niko\\Niko.csproj",
+      "packagesPath": "C:\\Users\\kadir.goktekin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kadir.goktekin\\Documents\\Programmering\\Niko\\Niko\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\kadir.goktekin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "Raylib-CsLo": {
+            "target": "Package",
+            "version": "[4.2.0.3, )"
+          },
+          "Raylib-cs": {
+            "target": "Package",
+            "version": "[4.2.0.1, )"
+          },
+          "raylib": {
+            "target": "Package",
+            "version": "[4.2.0.2, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
