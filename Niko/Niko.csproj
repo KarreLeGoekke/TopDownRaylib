@@ -8,6 +8,32 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="resources\Button.png" />
+    <None Remove="resources\MainMenu.png" />
+    <None Remove="resources\music\ageispolis.ogg" />
+    <None Remove="resources\music\pulsewidth.ogg" />
+    <None Remove="resources\Spert.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\Button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\MainMenu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\music\ageispolis.ogg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\music\pulsewidth.ogg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\Spert.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="raylib" Version="4.2.0.2" />
     <PackageReference Include="Raylib-cs" Version="4.2.0.1" />
     <PackageReference Include="Raylib-CsLo" Version="4.2.0.3" />

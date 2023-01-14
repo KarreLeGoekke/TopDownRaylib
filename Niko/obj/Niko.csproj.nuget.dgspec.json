@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kadir.goktekin\\Documents\\Programmering\\Niko\\Niko\\Niko.csproj": {}
+    "C:\\Users\\kadir.goktekin\\Documents\\Web\\TopDownRaylib\\Niko\\Niko.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kadir.goktekin\\Documents\\Programmering\\Niko\\Niko\\Niko.csproj": {
+    "C:\\Users\\kadir.goktekin\\Documents\\Web\\TopDownRaylib\\Niko\\Niko.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kadir.goktekin\\Documents\\Programmering\\Niko\\Niko\\Niko.csproj",
+        "projectUniqueName": "C:\\Users\\kadir.goktekin\\Documents\\Web\\TopDownRaylib\\Niko\\Niko.csproj",
         "projectName": "Niko",
-        "projectPath": "C:\\Users\\kadir.goktekin\\Documents\\Programmering\\Niko\\Niko\\Niko.csproj",
+        "projectPath": "C:\\Users\\kadir.goktekin\\Documents\\Web\\TopDownRaylib\\Niko\\Niko.csproj",
         "packagesPath": "C:\\Users\\kadir.goktekin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kadir.goktekin\\Documents\\Programmering\\Niko\\Niko\\obj\\",
+        "outputPath": "C:\\Users\\kadir.goktekin\\Documents\\Web\\TopDownRaylib\\Niko\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kadir.goktekin\\AppData\\Roaming\\NuGet\\NuGet.Config",

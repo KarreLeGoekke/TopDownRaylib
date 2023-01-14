@@ -1,0 +1,16 @@
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\Niko.exe
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\Niko.dll
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\Niko.deps.json
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\Niko.runtimeconfig.json
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\Niko.pdb
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\Microsoft.Toolkit.HighPerformance.dll
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\Raylib-cs.dll
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\Raylib-CsLo.dll
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\runtimes\win-x64\native\raylib.dll
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\runtimes\win-x86\native\raylib.dll
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\runtimes\linux-x64\native\libraylib.so
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\runtimes\linux-x64\native\readme.md
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\runtimes\osx-x64\native\libraylib.dylib
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\runtimes\osx-x64\native\readme.md
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\runtimes\win-x64\native\raylib.pdb
+C:\Users\kadir.goktekin\Desktop\leCeeSharpGame\runtimes\win-x86\native\needs-pr.txt
