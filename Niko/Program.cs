@@ -454,7 +454,7 @@ while (!Raylib.WindowShouldClose())
     {
         Raylib.DrawText($"FPS: {Raylib.GetFPS()}", 8, 684, 32, Color.RED);
         Raylib.DrawText($"DIRECTION: {MathF.Round(xDir, 2)}, {MathF.Round(yDir, 2)}", 8, 648, 32, Color.RED);
-        Raylib.DrawText($"TIME: {MathF.Round(xDir, 2)}, {MathF.Round(yDir, 2)}", 8, 648, 32, Color.RED);
+        Raylib.DrawText($"TIME: {MathF.Round(xDir, 2)}, {MathF.Round(yDir, 2)}", 8, 612, 32, Color.RED);
     }
 
     Raylib.EndDrawing();
