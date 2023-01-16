@@ -28,7 +28,7 @@ List<string> messages = new();
 bool speedCooldown = false;
 bool specialCooldown = false;
 bool enemyCooldown = false;
-bool dead = false;
+bool dead = true;
 bool exitButtonPressed = false;
 bool debugMode = false;
 
@@ -130,6 +130,8 @@ float smoothStep(float min, float max, float step, bool negative)
 bool countingDown = false;
 async void timeCount()
 {
+    var cancel = new CancellationTokenSource();
+    if (dead) cancel.Cancel();
     if (countingDown) return;
     countingDown = true;
     await Task.Delay(1000);
@@ -155,6 +157,12 @@ while (!Raylib.WindowShouldClose())
 
     if (scene == "menu")
     {
+        // Låsa upp pekaren
+        Raylib.EnableCursor();
+
+        // Hjälten lever inte ifall de lever
+        if (dead == false) dead = true;
+
         // Stoppa alla musik och Spela Musik
 
         Raylib.StopSound(gameMusic);
@@ -189,6 +197,9 @@ while (!Raylib.WindowShouldClose())
     }
     else if (scene == "game")
     {
+        // Låsa pekaren
+        Raylib.DisableCursor();
+
         // Spela Musik
 
         Raylib.StopSound(menuMusic);
@@ -196,7 +207,7 @@ while (!Raylib.WindowShouldClose())
 
         // Hjälten ska leva (bara ifall de är döda)
 
-        dead = false;
+        if (dead == true) dead = false;
 
         // Variabler
         
@@ -251,6 +262,10 @@ while (!Raylib.WindowShouldClose())
 
         async void spawnSpeedOrb()
         {
+            var cancel = new CancellationTokenSource();
+            if (dead) cancel.CancelAfter(1);
+            if (speedCooldown) return;
+            
             Random rnd = new Random();
 
             Vector2 speedPos = new Vector2(rnd.Next(0, 928), rnd.Next(0, 688));
@@ -271,6 +286,10 @@ while (!Raylib.WindowShouldClose())
 
         async void spawnSpecialOrb()
         {
+            var cancel = new CancellationTokenSource();
+            if (dead) cancel.CancelAfter(1);
+            if (specialCooldown) return;
+
             Random rnd = new Random();
 
             Vector2 specialPos = new Vector2(rnd.Next(0, 928), rnd.Next(0, 688));
@@ -293,6 +312,8 @@ while (!Raylib.WindowShouldClose())
 
         async void spawnEnemyOrb()
         {
+            if (enemyCooldown) return;
+
             Random rnd = new Random();
 
             Vector2 enemyPos = new Vector2(rnd.Next(0, 896), rnd.Next(0, 656));
@@ -311,7 +332,7 @@ while (!Raylib.WindowShouldClose())
         // För varje entitets position på listan ritas entiteten.
         // Om hjälten och entiteten colliderar med varandra så görs effekten.
 
-        if (speedCooldown == false && dead == false) spawnSpeedOrb();
+        spawnSpeedOrb();
 
         for (int i = 0; i < speedOrbPositions.Count(); i++)
         {
@@ -325,7 +346,7 @@ while (!Raylib.WindowShouldClose())
             }
         }
 
-        if (specialCooldown == false && dead == false) spawnSpecialOrb();
+        spawnSpecialOrb();
 
         bool textCooldown = false;
         foreach (KeyValuePair<Vector2, int> element in specialOrbPositions)
@@ -368,7 +389,7 @@ while (!Raylib.WindowShouldClose())
             }
         }
 
-        if (enemyCooldown == false && dead == false) spawnEnemyOrb();
+        spawnEnemyOrb();
 
         int enemyIndex = 0;
         foreach (KeyValuePair<Vector2, bool> element in enemyOrbPositions)
