@@ -11,6 +11,7 @@ Raylib.SetTargetFPS(60);
 
 string scene = "menu";
 bool buttonsEnabled = true;
+bool helpButtonEnabled = false;
 
 float xDir = 0;
 float yDir = 0;
@@ -50,7 +51,7 @@ Rectangle heroPhys = new Rectangle(playerPos.X, playerPos.Y, 32, 32);
 
 // Funktioner
 
-void createButton(string text, int x, int y, Action a)
+void createButton(string text, int x, int y, Action a, bool toggle)
 {
     Color color = Color.LIGHTGRAY;
 
@@ -66,7 +67,7 @@ void createButton(string text, int x, int y, Action a)
 
     Raylib.DrawText(text, x + 192 - xMid, y + 48 - yMid, 64, Color.DARKGRAY);
 
-    if(getZone(x, y, 392, 96) && Raylib.IsMouseButtonPressed(MouseButton.MOUSE_BUTTON_LEFT) && buttonsEnabled)
+    if(getZone(x, y, 392, 96) && Raylib.IsMouseButtonPressed(MouseButton.MOUSE_BUTTON_LEFT) && toggle)
     {
         Task t = new Task(a);
         t.Start();
@@ -98,9 +99,18 @@ void openGame()
     buttonsEnabled = false;
 }
 
-void settings()
+void help()
 {
-    Console.WriteLine("To be implemented");
+    scene = "help";
+    buttonsEnabled = false;
+    helpButtonEnabled = true;
+}
+
+void menu()
+{
+    scene ="menu";
+    buttonsEnabled = true;
+    helpButtonEnabled = false;
 }
 
 int getAxis(string direction)
@@ -171,8 +181,8 @@ while (!Raylib.WindowShouldClose())
         // Visa bakgrund och knappor
 
         Raylib.DrawTexture(background, 0, 0, Color.WHITE);
-        createButton("Play", 512, 192, openGame);
-        createButton("Settings", 512, 320, settings);
+        createButton("Play", 512, 192, openGame, buttonsEnabled);
+        createButton("Help", 512, 320, help, buttonsEnabled);
 
         void exitGame()
         {
@@ -186,7 +196,7 @@ while (!Raylib.WindowShouldClose())
         enemyOrbSpeed.Clear();
         enemyOrbLocalPositions.Clear();
 
-        createButton("Exit", 512, 448, exitGame);
+        createButton("Exit", 512, 448, exitGame, buttonsEnabled);
 
         if (exitButtonPressed == true)
         {
@@ -442,7 +452,13 @@ while (!Raylib.WindowShouldClose())
             textIndex++;
         }
     }
-
+    else if (scene == "help")
+    {
+        Raylib.DrawTexture(background, 0, 0, Color.WHITE);
+        Raylib.DrawText("How to play", 32, 332, 64, Color.WHITE);
+        Raylib.DrawText("To move, press WASD keys.\nAll you need to do is to\navoid red orbs (enemies)\nBlue orbs are special orbs\nand they give you a random\nability, such as:\nDouble speed, speed reset,\nRemove all enemies, double speed\nfor all enemies, and nothing.\nMake sure you play clever\nand dodge safely!", 512, 32, 24, Color.WHITE);
+        createButton("Menu", 512, 448, menu, helpButtonEnabled);
+    }
     // Om hjälten är död i spelen, gå tillbaka till spelet.
 
     if (dead && scene == "game")
