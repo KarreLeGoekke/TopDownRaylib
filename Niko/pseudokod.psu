@@ -1,0 +1,42 @@
+Linje 351 - 390 på Program.cs
+
+bool textCooldown ÍS false
+FOR EACH pair(vector2, integer) AS specialOrb IN specialOrbPositions
+{
+    DrawCircle(specialOrb.vector2, 12, Blue)
+
+    IF Ball(specialOrb.vector2, 12) COLLIDING hero EQUALS true THEN
+    {
+        REMOVE specialOrb.vector2 IN specialOrbPositions
+
+        IF specialOrb.integer EQUALS 1 THEN
+        {
+            Message("Double Speed")
+            speed TIMES 2
+        }
+        ELSE IF specialOrb.integer EQUALS 2 THEN
+        {
+            Message("Speed Reset")
+            speed IS 3
+        }
+        ELSE IF specialOrb.integer EQUALS 3 THEN
+        {
+            Message("Enemies Gone")
+            RemoveAllInList(enemyOrbPositions)
+            RemoveAllInList(enemyOrbSpeeds)
+            RemoveAllInList(enemyOrbLocalPositions)
+        }
+        ELSE IF specialOrb.integer EQUALS 4 THEN
+        {
+            Message("Enemies Double Speed")
+            FOR EACH pair(integer, decimal) AS enemyOrb IN enemyOrbSpeeds
+            {
+                enemyOrb.decimal TIMES 2
+            }
+        }
+        ELSE
+        {
+            Message("NOTHING")
+        }
+    }
+}
